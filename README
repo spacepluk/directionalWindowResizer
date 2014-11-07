@@ -1,0 +1,20 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5051
+
+The idea behind this plugin is to allow users to resize windows by using the Ctrl key (or something else the user may choose) + whatever they have assigned to  <down> <up> <left> & <right> which by default is obviously jkhl.
+
+Therefore, by default, the windows adjustment functions in directionalWindowResizer.vim are  set to <Ctrl+j> for down, <Ctrl+k> for up, <Ctrl+l> for right & <Ctrl +h> for left
+These mappings are at the very top of the file, adjust them to whatever suits your needs
+
+The behaviour of it is as follows:
+Whatever window is currently selected is the window that is going to be resized. 
+Ctrl j - if bottom most window selected, window size is reduced by 1
+          - for all other windows the bottom border is pushed downwards by 1
+Ctrl k - if top most window selected, window size is reduced by 1
+           - for all other windows the top border is pushed upwards by 1
+Ctrl l - if right most window selected, window size is reduced by 1
+          - for all other windows the right border is pushed to the right by 1
+Ctrl h - if left most window selected, window size is reduced by 1
+           - for all other windows the left border is pushed to the left by 1
+
+If you only have 1 window or if you only have vertically split windows Ctrl j & 
+Ctrl k will not work  ie if you only have vertical splits why would you want to reduce all their sizes?  Similarily if you only have 1 window or you only have horizontally split windows Ctrl l & Ctrl h won't work either.
