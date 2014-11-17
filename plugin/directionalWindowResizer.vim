@@ -1,10 +1,10 @@
 "By default I have the windows adjustment functions set to <Ctrl+j> for down, <Ctrl+k> for up, <Ctrl+l> for right & <Ctrl +h> for left
 "Adjust them to whatever suits your needs
 
-nnoremap <silent> <C-j> :call DownHorizontal()<CR>
-nnoremap <silent> <C-k> :call UpHorizontal()<CR>
-nnoremap <silent> <C-l> :call RightVertical()<CR>
-nnoremap <silent> <C-h> :call LeftVertical()<CR>
+nnoremap <silent> <M-S-j> :call DownHorizontal()<CR>
+nnoremap <silent> <M-S-k> :call UpHorizontal()<CR>
+nnoremap <silent> <M-S-l> :call RightVertical()<CR>
+nnoremap <silent> <M-S-h> :call LeftVertical()<CR>
 
 
 "WINDOW RESIZING Down
@@ -24,6 +24,7 @@ else
    exe currentWin . "wincmd w"
    call DownHorizontalAdjust()
 endif
+stopinsert
 endfun
 
 func! DownHorizontalAdjust()
@@ -56,6 +57,7 @@ else
    exe currentWin . "wincmd w"
    call UpHorizontalAdjust()
 endif
+stopinsert
 endfun
 
 func! UpHorizontalAdjust()
@@ -82,6 +84,7 @@ else
   exe currentWin . "wincmd w"
   vertical resize +1
 endif
+stopinsert
 endfun
 
 
@@ -96,8 +99,6 @@ else
   vertical resize -1
   exe currentWin . "wincmd w"
 endif
+stopinsert
 endfun
-
-
-
 
